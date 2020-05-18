@@ -53,7 +53,7 @@
     )
 
   (:action cambia_dia
-    :parameters (?d1 ?d2 - day)
+    :parameters (?d1 ?d2 - dia)
     :precondition (and (dia_actual ?d1) (anterior ?d1 ?d2))
     :effect (and (not (dia_actual ?d1)) (dia_actual ?d2)
         (forall (?ej - ejercicio)

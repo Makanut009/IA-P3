@@ -16,7 +16,7 @@ class Ejercicio:
 		return self.num == other.num
 
 	def __str__(self):
-		return "Ex" + str(self.num)
+		return "ej" + str(self.num)
 
 	def __repr__(self):
 		return self.__str__()

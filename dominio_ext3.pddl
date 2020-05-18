@@ -4,6 +4,7 @@
     :strips
     :typing
     :adl
+    :fluents
   )
 
   (:types

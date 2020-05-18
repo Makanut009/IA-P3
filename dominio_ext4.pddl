@@ -42,7 +42,7 @@
     		(not (and (preparador ?ej ?ej_a_asignar) (not (hecho_hoy ?ej))))
     	)
 
-    	(<= (+ (duracion ?ej_a_asignar) ) 90)
+    	(<= (+ (duracion ?ej_a_asignar) (tiempo_dia)) 90)
     )
     :effect (and 
   		(forall (?ej - ejercicio)

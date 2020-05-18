@@ -1,0 +1,4 @@
+*.o
+*/ff
+*_pddl.c
+*.tab.c

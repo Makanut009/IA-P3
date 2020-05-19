@@ -19,7 +19,7 @@
   (:predicates
     (anterior ?d1 - dia ?d2 - dia)
     (precursor ?ej_precursor - ejercicio ?ej_a_asignar - ejercicio)
-    (preparador ?ej1 - ejercicio ?ej2 - ejercicio)
+    (preparador ?ej_preparador - ejercicio ?ej_a_asignar - ejercicio)
     (dia_actual ?dia - dia)
     (hecho_hoy ?ej - ejercicio)
     (ultimo_ejercicio ?ej - ejercicio)

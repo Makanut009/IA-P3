@@ -19,13 +19,13 @@
 
   (:predicates
     (anterior ?d1 - dia ?d2 - dia)
-    (precursor ?ej1 - ejercicio ?ej2 - ejercicio)
-    (preparador ?ej1 - ejercicio ?ej2 - ejercicio)
+    (precursor ?ej_precursor - ejercicio ?ej_a_asignar - ejercicio)
+    (preparador ?ej_preparador - ejercicio ?ej_a_asignar - ejercicio)
     (dia_actual ?dia - dia)
     (hecho_hoy ?ej - ejercicio)
     (ultimo_ejercicio ?ej - ejercicio)
     (null ?ej - ejercicio)
-  ) 
+  )
 
   (:action asigna_ejercicio
     :parameters (?ej_precursor ?ej_a_asignar - ejercicio)

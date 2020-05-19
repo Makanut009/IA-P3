@@ -84,7 +84,8 @@ def goal(file, ejercicios):
 	file.write("  (:goal (and (dia_actual d15) ")
 
 	for e in ejercicios:
-		file.write("(= (dificultad " + str(e) + ") " + str(random.randint(e.dificultad, 10)) + ") ")
+		if e.dificultad != 10: file.write("(= (dificultad " + str(e) + ") " + str(random.randint(e.dificultad + 1, 10)) + ") ")
+		else: file.write("(= (dificultad " + str(e) + ") " + str(10) + ") ")
 	file.write("))\n")
 
 def main():
@@ -123,8 +124,9 @@ def main():
 			r2 = random.randint(0, num_ejercicios - 1)
 
 		if len(ejercicios[r1].precursor) >= 1: continue
-		ejercicios[r1].precursor.append(ejercicios[r2])
-		num_prec -= 1
+		if len(ejercicios[r2].precursor) == 0 or (len(ejercicios[r2].precursor) > 0 and ejercicios[r2].precursor[0] != ejercicios[r1]):
+			ejercicios[r1].precursor.append(ejercicios[r2])
+			num_prec -= 1
 
 	while num_prep > 0:
 		r1 = r2 = -1
@@ -134,9 +136,18 @@ def main():
 
 		ya_es_preparador = False
 		for ej in ejercicios[r1].preparadores:
-			if (ej == ejercicios[r2]):
+			if ej == ejercicios[r2]:
 				ya_es_preparador = True
+				break
 		if ya_es_preparador: continue
+
+		for ej in ejercicios[r2].preparadores:
+			if ej == ejercicios[r1]:
+				ya_es_preparador = True
+				break
+		if ya_es_preparador: continue
+
+		if len(ejercicios[r2].precursor) > 0 and (ejercicios[r2].precursor == ejercicios[r1]): continue
 
 		ejercicios[r1].preparadores.append(ejercicios[r2])
 		num_prep -= 1

@@ -8,12 +8,11 @@
   )
 
   (:types
-    ejercicio dia - object
+    ejercicio dia dificultad - object
   )
   
   (:functions
     (duracion ?ej - ejercicio)
-    (dificultad ?ej - ejercicio)
     (tiempo_dia)
   )
 
@@ -24,22 +23,37 @@
     (dia_actual ?dia - dia)
     (hecho_hoy ?ej - ejercicio)
     (ultimo_ejercicio ?ej - ejercicio)
-    (null ?ej - ejercicio)
+    (nulo ?ej - ejercicio)
+    (dificultad_siguiente ?dif1 - dificultad ?dif2 - dificultad)
+    (dificultad_actual ?ej - ejercicio ?dif - dificultad)
   )
 
   (:action asigna_ejercicio
-    :parameters (?ej_precursor ?ej_a_asignar - ejercicio)
+    :parameters (?ej_a_asignar - ejercicio ?difsiguiente - dificultad ?dia - dia)
     :precondition (and
-      (not (null ?ej_a_asignar))
-    	(not (hecho_hoy ?ej_a_asignar)) 
+  
+      (dia_actual ?dia)
 
-      ; Precursor
-			(precursor ?ej_precursor ?ej_a_asignar)
-    	(or (null ?ej_precursor) (ultimo_ejercicio ?ej_precursor))
+      (exists (?dif - dificultad)
+        (and
+          (dificultad_actual ?ej_a_asignar ?dif)
+          (dificultad_siguiente ?dif ?difsiguiente)
+        )
+      )      
+
+      (exists (?ej_precursor - ejercicio)
+        (and
+          (precursor ?ej_precursor ?ej_a_asignar)
+          (or (nulo ?ej_precursor) (ultimo_ejercicio ?ej_precursor))
+        )
+      )
+
+      (not (nulo ?ej_a_asignar))
+    	(not (hecho_hoy ?ej_a_asignar))
 
       ; Preparadores
     	(forall (?ej - ejercicio)
-    		(not (and (preparador ?ej ?ej_a_asignar) (not (hecho_hoy ?ej))))
+    		(or (nulo ?ej) (not (and (preparador ?ej ?ej_a_asignar) (not (hecho_hoy ?ej)))))
     	)
 
     	(<= (+ (duracion ?ej_a_asignar) (tiempo_dia)) 90)
@@ -52,7 +66,11 @@
     	(hecho_hoy ?ej_a_asignar)
     		
     	(increase (tiempo_dia) (duracion ?ej_a_asignar))
-    	(when (< (dificultad ?ej_a_asignar) 10) (increase (dificultad ?ej_a_asignar) 1))
+
+      (forall (?difi - dificultad)
+        (when (dificultad_actual ?ej_a_asignar ?difi) (not (dificultad_actual ?ej_a_asignar ?difi)))
+  		)
+      (dificultad_actual ?ej_a_asignar ?difsiguiente)
     )
   )
 

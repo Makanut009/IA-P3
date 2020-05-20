@@ -16,7 +16,7 @@
   )
 
   (:predicates
-    (anterior ?d1 - dia ?d2 - dia)
+    (dia_siguiente ?d1 - dia ?d2 - dia)
     (precursor ?ej_precursor - ejercicio ?ej_a_asignar - ejercicio)
     (preparador ?ej_preparador - ejercicio ?ej_a_asignar - ejercicio)
     (dia_actual ?dia - dia)
@@ -75,7 +75,7 @@
 
   (:action cambia_dia
     :parameters (?d1 ?d2 - dia)
-    :precondition (and (dia_actual ?d1) (anterior ?d1 ?d2))
+    :precondition (and (dia_actual ?d1) (dia_siguiente ?d1 ?d2))
     :effect (and 
       (not (dia_actual ?d1))
       (dia_actual ?d2)

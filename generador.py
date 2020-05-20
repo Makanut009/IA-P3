@@ -31,29 +31,41 @@ def objetos(file, ejercicios):
 	file.write("    ")
 	for e in ejercicios:
 		file.write(str(e) + " ")
-	file.write("none - ejercicio\n")
+	file.write("ninguno - ejercicio\n")
+
+	# Escribe dificultad
+	file.write("    ")
+	for i in range(0,11):
+		file.write("dif" + str(i) + " ")
+	file.write(" - dificultad\n")
 
 	# Escribe dias
 	file.write("    ")
 	for i in range(15):
-		file.write("d" + str(i+1) + " ")
+		file.write("dia" + str(i+1) + " ")
 	file.write(" - dia\n")
 
 	file.write("  )\n")
 
 def init(file, ejercicios, extension):
 	file.write("  (:init\n")
-	file.write("    (dia_actual d1)\n\n")
-	file.write("    (null none)\n\n")
+	file.write("    (dia_actual dia1)\n\n")
+	file.write("    (nulo ninguno)\n\n")
 
-	# Escribe que dias son anteriores a otros
+	# Escribe que dias son siguientes a otros
 	for i in range(14):
-		file.write("    (anterior d" + str(i+1) + " d" + str(i+2) + ")\n")
+		file.write("    (dia_siguiente dia" + str(i+1) + " dia" + str(i+2) + ")\n")
+	file.write("\n")
+
+	# Escribe que dificultades son siguientes a otras
+	for i in range(0,10):
+		file.write("    (dificultad_siguiente dif" + str(i) + " dif" + str(i+1) + ")\n")
+	file.write("    (dificultad_siguiente dif10 dif10)\n")
 	file.write("\n")
 
 	# Escribe la dificultad de los ejercicios
 	for e in ejercicios:
-		file.write("    (= (dificultad " + str(e) + ") " + str(e.dificultad) + ")\n")
+		file.write("    (dificultad_actual " + str(e) + " dif" + str(e.dificultad) + ")\n")
 	file.write("\n")
 
 	if extension == 3:
@@ -69,7 +81,7 @@ def init(file, ejercicios, extension):
 		for p in e.precursor:
 			file.write("    (precursor " + str(p) + " " + str(e) + ")\n")
 			added = True
-		if not added: file.write("    (precursor none " + str(e) + ")\n")
+		if not added: file.write("    (precursor ninguno " + str(e) + ")\n")
 	file.write("\n")
 
 	# Escribe preparadores
@@ -81,11 +93,11 @@ def init(file, ejercicios, extension):
 	file.write("  )\n")
 
 def goal(file, ejercicios):
-	file.write("  (:goal (and (dia_actual d15) ")
+	file.write("  (:goal (and (dia_actual dia15) ")
 
 	for e in ejercicios:
-		if e.dificultad != 10: file.write("(= (dificultad " + str(e) + ") " + str(random.randint(e.dificultad + 1, 10)) + ") ")
-		else: file.write("(= (dificultad " + str(e) + ") " + str(10) + ") ")
+		if e.dificultad != 10: file.write("(dificultad_actual " + str(e) + " dif" + str(random.randint(e.dificultad + 1, 10)) + ") ")
+		else: file.write("(dificultad_actual " + str(e) + " dif" + str(10) + ") ")
 	file.write("))\n")
 
 def main():

@@ -55,7 +55,7 @@
     		(or (nulo ?ej) (not (and (preparador ?ej ?ej_a_asignar) (not (hecho_hoy ?ej)))))
     	)
 
-    	(< (numero_ej) 6)
+    	(<= (numero_ej) 6)
     )
     :effect (and 
   		(forall (?ej - ejercicio)

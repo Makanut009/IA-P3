@@ -3,7 +3,7 @@
   (:domain ejercicios)
 
   (:objects
-    ej1 ej2 ej3 ej4 ej5 ej6 ej_goal ninguno - ejercicio
+    ej1 ej2 ej3 ej4 ej5 ej6 ej7 ej_goal ninguno - ejercicio
     dia1 dia2 dia3 - dia
     dif0 dif1 dif2 dif3 dif4 dif5 dif6 dif7 dif8 dif9 dif10 - dificultad
   )
@@ -20,6 +20,7 @@
   	(dificultad_actual ej4 dif0)
   	(dificultad_actual ej5 dif0)
   	(dificultad_actual ej6 dif0)
+	(dificultad_actual ej7 dif0)
   	(dificultad_actual ej_goal dif0)
 
 	(dificultad_siguiente dif0 dif1)
@@ -44,6 +45,7 @@
   	(precursor ninguno ej4)
 	(precursor ninguno ej5)
 	(precursor ninguno ej6)
+	(precursor ninguno ej7)
 	(precursor ninguno ej_goal)
 
   	(preparador ej1 ej_goal)
@@ -52,6 +54,7 @@
   	(preparador ej4 ej_goal)
 	(preparador ej5 ej_goal)
 	(preparador ej6 ej_goal)
+	(preparador ej7 ej_goal)
   ) 
   
   (:goal (and (dia_actual dia3) (dificultad_actual ej_goal dif1))

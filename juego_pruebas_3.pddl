@@ -1,4 +1,4 @@
-(define (problem ejemplo3_ext3)
+(define (problem juego_pruebas_3)
 
   (:domain ejercicios)
   (:objects 

@@ -1,0 +1,585 @@
+////////////////////
+    EXTENSION 3
+////////////////////
+
+-------------------------------------------------------------------------------------------------------------------
+    Juego de pruebas 1
+-------------------------------------------------------------------------------------------------------------------
+
+./Metric-FF/ff -o dominio_ext3.pddl -f juego_pruebas_1.pddl 
+
+ff: parsing domain file
+domain 'EJERCICIOS' defined
+ ... done.
+ff: parsing problem file
+problem 'JUEGO_PRUEBAS_1' defined
+ ... done.
+
+
+no metric specified. plan length assumed.
+
+task contains conditional effects. turning off state domination.
+
+
+
+checking for cyclic := effects --- OK.
+
+ff: search configuration is EHC, if that fails then  best-first on 1*g(s) + 5*h(s) where
+    metric is  plan length
+
+Cueing down from goal distance:   10 into depth [1]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1][2][3][4][5][6][7][8] --- pruning stopped --- [1][2][3][4][5][6][7][8]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+
+advancing to distance:   10
+                          9
+                          8
+                          7
+                          6
+                          5
+                          4
+                          3
+                          2 
+
+best first search space empty! problem proven unsolvable.
+
+
+
+time spent:    0.00 seconds instantiating 2 easy, 264 hard action templates
+               0.00 seconds reachability analysis, yielding 116 facts and 266 actions
+               0.00 seconds creating final representation with 115 relevant facts, 2 relevant fluents
+               0.01 seconds computing LNF
+               0.00 seconds building connectivity graph
+             158.82 seconds searching, evaluating 1117337 states, to a max depth of 8
+             158.83 seconds total time
+
+
+-------------------------------------------------------------------------------------------------------------------
+    Juego de pruebas 2
+-------------------------------------------------------------------------------------------------------------------
+
+./Metric-FF/ff -o dominio_ext3.pddl -f juego_pruebas_2.pddl 
+
+ff: parsing domain file
+domain 'EJERCICIOS' defined
+ ... done.
+ff: parsing problem file
+problem 'JUEGO_PRUEBAS_2' defined
+ ... done.
+
+
+no metric specified. plan length assumed.
+
+task contains conditional effects. turning off state domination.
+
+
+
+checking for cyclic := effects --- OK.
+
+ff: search configuration is EHC, if that fails then  best-first on 1*g(s) + 5*h(s) where
+    metric is  plan length
+
+Cueing down from goal distance:   26 into depth [1]
+                                  25            [1]
+                                  24            [1]
+                                  23            [1]
+                                  22            [1]
+                                  21            [1]
+                                  20            [1]
+                                  19            [1]
+                                  18            [1]
+                                  17            [1]
+                                  16            [1]
+                                  15            [1]
+                                  14            [1]
+                                  13            [1]
+                                  12            [1]
+                                  11            [1]
+                                  10            [1]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: CAMBIA_DIA DIA1 DIA2
+        1: CAMBIA_DIA DIA2 DIA3
+        2: CAMBIA_DIA DIA3 DIA4
+        3: CAMBIA_DIA DIA4 DIA5
+        4: CAMBIA_DIA DIA5 DIA6
+        5: CAMBIA_DIA DIA6 DIA7
+        6: CAMBIA_DIA DIA7 DIA8
+        7: ASIGNA_EJERCICIO EJ21 DIF3 DIA8
+        8: CAMBIA_DIA DIA8 DIA9
+        9: ASIGNA_EJERCICIO EJ21 DIF4 DIA9
+       10: CAMBIA_DIA DIA9 DIA10
+       11: ASIGNA_EJERCICIO EJ21 DIF5 DIA10
+       12: CAMBIA_DIA DIA10 DIA11
+       13: ASIGNA_EJERCICIO EJ21 DIF6 DIA11
+       14: CAMBIA_DIA DIA11 DIA12
+       15: ASIGNA_EJERCICIO EJ21 DIF7 DIA12
+       16: CAMBIA_DIA DIA12 DIA13
+       17: ASIGNA_EJERCICIO EJ21 DIF8 DIA13
+       18: CAMBIA_DIA DIA13 DIA14
+       19: ASIGNA_EJERCICIO EJ20 DIF3 DIA14
+       20: ASIGNA_EJERCICIO EJ9 DIF5 DIA14
+       21: ASIGNA_EJERCICIO EJ21 DIF9 DIA14
+       22: ASIGNA_EJERCICIO EJ19 DIF10 DIA14
+       23: CAMBIA_DIA DIA14 DIA15
+       24: ASIGNA_EJERCICIO EJ9 DIF6 DIA15
+       25: ASIGNA_EJERCICIO EJ21 DIF10 DIA15
+     
+
+time spent:    0.05 seconds instantiating 14 easy, 3960 hard action templates
+               0.01 seconds reachability analysis, yielding 235 facts and 2219 actions
+               0.02 seconds creating final representation with 234 relevant facts, 2 relevant fluents
+               0.07 seconds computing LNF
+               0.08 seconds building connectivity graph
+               0.57 seconds searching, evaluating 29 states, to a max depth of 1
+               0.80 seconds total time
+
+
+-------------------------------------------------------------------------------------------------------------------
+    Juego de pruebas 3
+-------------------------------------------------------------------------------------------------------------------
+
+./Metric-FF/ff -o dominio_ext3.pddl -f juego_pruebas_3.pddl 
+
+ff: parsing domain file
+domain 'EJERCICIOS' defined
+ ... done.
+ff: parsing problem file
+problem 'JUEGO_PRUEBAS_3' defined
+ ... done.
+
+
+no metric specified. plan length assumed.
+
+task contains conditional effects. turning off state domination.
+
+
+
+checking for cyclic := effects --- OK.
+
+ff: search configuration is EHC, if that fails then  best-first on 1*g(s) + 5*h(s) where
+    metric is  plan length
+
+Cueing down from goal distance:   30 into depth [1]
+                                  29            [1]
+                                  28            [1]
+                                  27            [1]
+                                  26            [1]
+                                  25            [1]
+                                  24            [1]
+                                  23            [1]
+                                  22            [1]
+                                  21            [1]
+                                  20            [1]
+                                  19            [1]
+                                  18            [1]
+                                  17            [1]
+                                  16            [1]
+                                  15            [1]
+                                  14            [1]
+                                  13            [1]
+                                  12            [1]
+                                  11            [1]
+                                  10            [1]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1] --- pruning stopped --- [1][2][3][4][5]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+
+advancing to distance:   30
+                         29
+                         28
+                         27
+                         26
+                         25
+                         24
+                         23
+                         22
+                         21
+                         20
+                         19
+                         18
+                         17
+                         16
+                         15
+                         14
+                         13
+                         12
+                         11
+                         10
+                          9
+                          8
+                          7
+                          6
+                          5
+                          4
+                          3
+                          2
+                          1
+                          0
+
+ff: found legal plan as follows
+
+step    0: ASIGNA_EJERCICIO EJ0 DIF2 DIA1
+        1: ASIGNA_EJERCICIO EJ10 DIF3 DIA1
+        2: ASIGNA_EJERCICIO EJ15 DIF8 DIA1
+        3: CAMBIA_DIA DIA1 DIA2
+        4: ASIGNA_EJERCICIO EJ0 DIF3 DIA2
+        5: ASIGNA_EJERCICIO EJ10 DIF4 DIA2
+        6: ASIGNA_EJERCICIO EJ15 DIF9 DIA2
+        7: CAMBIA_DIA DIA2 DIA3
+        8: ASIGNA_EJERCICIO EJ0 DIF4 DIA3
+        9: ASIGNA_EJERCICIO EJ10 DIF5 DIA3
+       10: CAMBIA_DIA DIA3 DIA4
+       11: ASIGNA_EJERCICIO EJ0 DIF5 DIA4
+       12: ASIGNA_EJERCICIO EJ10 DIF6 DIA4
+       13: CAMBIA_DIA DIA4 DIA5
+       14: ASIGNA_EJERCICIO EJ0 DIF6 DIA5
+       15: ASIGNA_EJERCICIO EJ10 DIF7 DIA5
+       16: CAMBIA_DIA DIA5 DIA6
+       17: ASIGNA_EJERCICIO EJ0 DIF7 DIA6
+       18: ASIGNA_EJERCICIO EJ10 DIF8 DIA6
+       19: CAMBIA_DIA DIA6 DIA7
+       20: ASIGNA_EJERCICIO EJ10 DIF9 DIA7
+       21: CAMBIA_DIA DIA7 DIA8
+       22: ASIGNA_EJERCICIO EJ10 DIF10 DIA8
+       23: CAMBIA_DIA DIA8 DIA9
+       24: CAMBIA_DIA DIA9 DIA10
+       25: CAMBIA_DIA DIA10 DIA11
+       26: CAMBIA_DIA DIA11 DIA12
+       27: CAMBIA_DIA DIA12 DIA13
+       28: CAMBIA_DIA DIA13 DIA14
+       29: CAMBIA_DIA DIA14 DIA15
+     
+
+time spent:    0.04 seconds instantiating 14 easy, 3300 hard action templates
+               0.01 seconds reachability analysis, yielding 211 facts and 2039 actions
+               0.01 seconds creating final representation with 210 relevant facts, 2 relevant fluents
+               0.07 seconds computing LNF
+               0.06 seconds building connectivity graph
+              58.90 seconds searching, evaluating 11037 states, to a max depth of 5
+              59.09 seconds total time
+
+
+
+////////////////////
+    EXTENSION 4
+////////////////////
+
+-------------------------------------------------------------------------------------------------------------------
+    Juego de pruebas 4
+-------------------------------------------------------------------------------------------------------------------
+
+./Metric-FF/ff -o dominio_ext4.pddl -f juego_pruebas_4.pddl 
+
+ff: parsing domain file
+domain 'EJERCICIOS' defined
+ ... done.
+ff: parsing problem file
+problem 'JUEGO_PRUEBAS_4' defined
+ ... done.
+
+
+no metric specified. plan length assumed.
+
+task contains conditional effects. turning off state domination.
+
+
+
+checking for cyclic := effects --- OK.
+
+ff: search configuration is EHC, if that fails then  best-first on 1*g(s) + 5*h(s) where
+    metric is  plan length
+
+Cueing down from goal distance:   18 into depth [1]
+                                  17            [1]
+                                  16            [1]
+                                  15            [1]
+                                  14            [1]
+                                  13            [1]
+                                  12            [1]
+                                  11            [1]
+                                  10            [1]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1][2] --- pruning stopped --- [1][2]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+
+advancing to distance:   18
+                         17
+                         16
+                         15
+                         14
+                         13
+                         12
+                         11
+                         10
+                          9
+                          8
+                          7
+                          6
+                          5
+                          4
+
+best first search space empty! problem proven unsolvable.
+
+
+
+time spent:    0.01 seconds instantiating 14 easy, 495 hard action templates
+               0.00 seconds reachability analysis, yielding 58 facts and 509 actions
+               0.00 seconds creating final representation with 57 relevant facts, 2 relevant fluents
+               0.03 seconds computing LNF
+               0.00 seconds building connectivity graph
+               0.82 seconds searching, evaluating 1962 states, to a max depth of 2
+               0.86 seconds total time
+
+
+-------------------------------------------------------------------------------------------------------------------
+    Juego de pruebas 5
+-------------------------------------------------------------------------------------------------------------------
+
+./Metric-FF/ff -o dominio_ext4.pddl -f juego_pruebas_5.pddl
+
+ff: parsing domain file
+domain 'EJERCICIOS' defined
+ ... done.
+ff: parsing problem file
+problem 'JUEGO_PRUEBAS_5' defined
+ ... done.
+
+
+no metric specified. plan length assumed.
+
+task contains conditional effects. turning off state domination.
+
+
+
+checking for cyclic := effects --- OK.
+
+ff: search configuration is EHC, if that fails then  best-first on 1*g(s) + 5*h(s) where
+    metric is  plan length
+
+Cueing down from goal distance:   23 into depth [1]
+                                  22            [1]
+                                  21            [1]
+                                  20            [1]
+                                  19            [1]
+                                  18            [1]
+                                  17            [1]
+                                  16            [1]
+                                  15            [1]
+                                  14            [1]
+                                  13            [1]
+                                  12            [1]
+                                  11            [1]
+                                  10            [1]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: CAMBIA_DIA DIA1 DIA2
+        1: CAMBIA_DIA DIA2 DIA3
+        2: CAMBIA_DIA DIA3 DIA4
+        3: CAMBIA_DIA DIA4 DIA5
+        4: CAMBIA_DIA DIA5 DIA6
+        5: CAMBIA_DIA DIA6 DIA7
+        6: CAMBIA_DIA DIA7 DIA8
+        7: CAMBIA_DIA DIA8 DIA9
+        8: CAMBIA_DIA DIA9 DIA10
+        9: ASIGNA_EJERCICIO EJ20 DIF4 DIA10
+       10: CAMBIA_DIA DIA10 DIA11
+       11: ASIGNA_EJERCICIO EJ20 DIF5 DIA11
+       12: CAMBIA_DIA DIA11 DIA12
+       13: ASIGNA_EJERCICIO EJ20 DIF6 DIA12
+       14: CAMBIA_DIA DIA12 DIA13
+       15: ASIGNA_EJERCICIO EJ20 DIF7 DIA13
+       16: CAMBIA_DIA DIA13 DIA14
+       17: ASIGNA_EJERCICIO EJ20 DIF8 DIA14
+       18: CAMBIA_DIA DIA14 DIA15
+       19: ASIGNA_EJERCICIO EJ13 DIF6 DIA15
+       20: ASIGNA_EJERCICIO EJ21 DIF7 DIA15
+       21: ASIGNA_EJERCICIO EJ10 DIF10 DIA15
+       22: ASIGNA_EJERCICIO EJ20 DIF9 DIA15
+     
+
+time spent:    0.06 seconds instantiating 14 easy, 4125 hard action templates
+               0.00 seconds reachability analysis, yielding 217 facts and 1904 actions
+               0.02 seconds creating final representation with 216 relevant facts, 2 relevant fluents
+               0.07 seconds computing LNF
+               0.07 seconds building connectivity graph
+               0.46 seconds searching, evaluating 26 states, to a max depth of 1
+               0.68 seconds total time
+
+
+-------------------------------------------------------------------------------------------------------------------
+    Juego de pruebas 6
+-------------------------------------------------------------------------------------------------------------------
+
+./Metric-FF/ff -o dominio_ext4.pddl -f juego_pruebas_6.pddl 
+
+ff: parsing domain file
+domain 'EJERCICIOS' defined
+ ... done.
+ff: parsing problem file
+problem 'JUEGO_PRUEBAS_6' defined
+ ... done.
+
+
+no metric specified. plan length assumed.
+
+task contains conditional effects. turning off state domination.
+
+
+
+checking for cyclic := effects --- OK.
+
+ff: search configuration is EHC, if that fails then  best-first on 1*g(s) + 5*h(s) where
+    metric is  plan length
+
+Cueing down from goal distance:   30 into depth [1]
+                                  29            [1]
+                                  28            [1]
+                                  27            [1]
+                                  26            [1]
+                                  25            [1]
+                                  24            [1]
+                                  23            [1]
+                                  22            [1]
+                                  21            [1]
+                                  20            [1]
+                                  19            [1]
+                                  18            [1]
+                                  17            [1]
+                                  16            [1]
+                                  15            [1]
+                                  14            [1]
+                                  13            [1]
+                                  12            [1]
+                                  11            [1]
+                                  10            [1]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1] --- pruning stopped --- [1][2][3][4][5][6][7]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+
+advancing to distance:   30
+                         29
+                         28
+                         27
+                         26
+                         25
+                         24
+                         23
+                         22
+                         21
+                         20
+                         19
+                         18
+                         17
+                         16
+                         15
+                         14
+                         13
+                         12
+                         11
+                         10
+                          9
+                          8
+                          7
+                          6
+                          5
+                          4
+                          3
+                          2
+                          1
+                          0
+
+ff: found legal plan as follows
+
+step    0: ASIGNA_EJERCICIO EJ2 DIF5 DIA1
+        1: ASIGNA_EJERCICIO EJ10 DIF5 DIA1
+        2: ASIGNA_EJERCICIO EJ14 DIF5 DIA1
+        3: CAMBIA_DIA DIA1 DIA2
+        4: ASIGNA_EJERCICIO EJ2 DIF6 DIA2
+        5: ASIGNA_EJERCICIO EJ10 DIF6 DIA2
+        6: ASIGNA_EJERCICIO EJ14 DIF6 DIA2
+        7: CAMBIA_DIA DIA2 DIA3
+        8: ASIGNA_EJERCICIO EJ2 DIF7 DIA3
+        9: ASIGNA_EJERCICIO EJ10 DIF7 DIA3
+       10: ASIGNA_EJERCICIO EJ14 DIF7 DIA3
+       11: CAMBIA_DIA DIA3 DIA4
+       12: ASIGNA_EJERCICIO EJ2 DIF8 DIA4
+       13: ASIGNA_EJERCICIO EJ10 DIF8 DIA4
+       14: ASIGNA_EJERCICIO EJ14 DIF8 DIA4
+       15: CAMBIA_DIA DIA4 DIA5
+       16: ASIGNA_EJERCICIO EJ2 DIF9 DIA5
+       17: ASIGNA_EJERCICIO EJ10 DIF9 DIA5
+       18: ASIGNA_EJERCICIO EJ14 DIF9 DIA5
+       19: CAMBIA_DIA DIA5 DIA6
+       20: ASIGNA_EJERCICIO EJ10 DIF10 DIA6
+       21: CAMBIA_DIA DIA6 DIA7
+       22: CAMBIA_DIA DIA7 DIA8
+       23: CAMBIA_DIA DIA8 DIA9
+       24: CAMBIA_DIA DIA9 DIA10
+       25: CAMBIA_DIA DIA10 DIA11
+       26: CAMBIA_DIA DIA11 DIA12
+       27: CAMBIA_DIA DIA12 DIA13
+       28: CAMBIA_DIA DIA13 DIA14
+       29: CAMBIA_DIA DIA14 DIA15
+     
+
+time spent:    0.06 seconds instantiating 14 easy, 3795 hard action templates
+               0.00 seconds reachability analysis, yielding 206 facts and 1829 actions
+               0.02 seconds creating final representation with 205 relevant facts, 2 relevant fluents
+               0.06 seconds computing LNF
+               0.05 seconds building connectivity graph
+              85.63 seconds searching, evaluating 6960 states, to a max depth of 7
+              85.82 seconds total time
